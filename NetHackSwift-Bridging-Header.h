@@ -1,0 +1,5 @@
+#include "NetHackBefore.h"
+#include "CocoaNetHack.h"
+#include "hack.h"
+#include "config.h"
+#include "func_tab.h"
