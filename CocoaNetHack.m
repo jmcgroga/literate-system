@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CocoaNetHack.h"
 #include "hack.h"
 static struct passwd *NDECL(get_unix_pw);
 
 static boolean wiz_error_flag = FALSE;
+id <SwiftNetHack> swiftNetHack;
 
 boolean
 authorize_wizard_mode()

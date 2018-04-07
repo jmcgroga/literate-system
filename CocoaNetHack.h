@@ -9,6 +9,10 @@
 #ifndef CocoaNetHack_h
 #define CocoaNetHack_h
 
+@protocol SwiftNetHack;
+
+extern id <SwiftNetHack> swiftNetHack;
+
 int my_main(int argc, char *argv[]);
 
 #endif /* CocoaNetHack_h */

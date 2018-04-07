@@ -10,7 +10,6 @@
 #include "hack.h"
 #import "NetHackSwift-Swift.h"
 
-static const SwiftNetHack* swiftNetHack;
 extern struct window_procs cocoa_procs;
 extern void FDECL(win_cocoa_init, (int));
 extern void FDECL(cocoa_init_nhwindows, (int *, char **));

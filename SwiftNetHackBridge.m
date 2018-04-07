@@ -53,7 +53,11 @@ win_cocoa_init(dir)
 int dir;
 {
     if (!swiftNetHack) {
-        swiftNetHack = [[SwiftNetHack alloc] init];
+        // TODO: Error
+        NSLog(@"win_cocoa_init Error: No SwiftNetHack defined");
+        exit(1);
+    } else {
+        [swiftNetHack win_cocoa_init: dir];
     }
 }
 
@@ -264,7 +268,7 @@ cocoa_getlin(question, input)
 const char *question;
 char *input;
 {
-    NSString *answer = [swiftNetHack get__line:[NSString stringWithCString:question encoding:NSUTF8StringEncoding]];
+    NSString *answer = [swiftNetHack cocoa_getlin:[NSString stringWithCString:question encoding:NSUTF8StringEncoding]];
     strncpy(input, [answer cStringUsingEncoding:NSUTF8StringEncoding], BUFSZ);
 }
 
